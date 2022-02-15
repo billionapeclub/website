@@ -20,7 +20,7 @@ def create_app():
         return render_template('index.html')
 
     @app.route('/gallery-1', methods=["POST", "GET"])
-    def collections1():
+    def collections():
         results = [
             (
                 entry["_id"],
@@ -30,125 +30,8 @@ def create_app():
             )
             for entry in billionape.find({})
         ]
-        return render_template("/gallery/gallery-1.html", entries=results)
-
-    @app.route('/gallery-2', methods=["POST", "GET"])
-    def collections2():
-        results = [
-            (
-                entry["_id"],
-                entry["name_apes"],
-                entry["image_link"],
-                entry["web_link"],
-            )
-            for entry in billionape.find({})
-        ]
-        return render_template("/gallery/gallery-2.html", entries=results)
-
-    @app.route('/gallery-3', methods=["POST", "GET"])
-    def collections2():
-        results = [
-            (
-                entry["_id"],
-                entry["name_apes"],
-                entry["image_link"],
-                entry["web_link"],
-            )
-            for entry in billionape.find({})
-        ]
-        return render_template("/gallery/gallery-3.html", entries=results)
-
-    @app.route('/gallery-4', methods=["POST", "GET"])
-    def collections2():
-        results = [
-            (
-                entry["_id"],
-                entry["name_apes"],
-                entry["image_link"],
-                entry["web_link"],
-            )
-            for entry in billionape.find({})
-        ]
-        return render_template("/gallery/gallery-4.html", entries=results)
-
-    @app.route('/gallery-5', methods=["POST", "GET"])
-    def collections2():
-        results = [
-            (
-                entry["_id"],
-                entry["name_apes"],
-                entry["image_link"],
-                entry["web_link"],
-            )
-            for entry in billionape.find({})
-        ]
-        return render_template("/gallery/gallery-5.html", entries=results)
-
-    @app.route('/gallery-6', methods=["POST", "GET"])
-    def collections2():
-        results = [
-            (
-                entry["_id"],
-                entry["name_apes"],
-                entry["image_link"],
-                entry["web_link"],
-            )
-            for entry in billionape.find({})
-        ]
-        return render_template("/gallery/gallery-6.html", entries=results)
-
-    @app.route('/gallery-7', methods=["POST", "GET"])
-    def collections2():
-        results = [
-            (
-                entry["_id"],
-                entry["name_apes"],
-                entry["image_link"],
-                entry["web_link"],
-            )
-            for entry in billionape.find({})
-        ]
-        return render_template("/gallery/gallery-7.html", entries=results)
-
-    @app.route('/gallery-8', methods=["POST", "GET"])
-    def collections2():
-        results = [
-            (
-                entry["_id"],
-                entry["name_apes"],
-                entry["image_link"],
-                entry["web_link"],
-            )
-            for entry in billionape.find({})
-        ]
-        return render_template("/gallery/gallery-8.html", entries=results)
-
-    @app.route('/gallery-9', methods=["POST", "GET"])
-    def collections2():
-        results = [
-            (
-                entry["_id"],
-                entry["name_apes"],
-                entry["image_link"],
-                entry["web_link"],
-            )
-            for entry in billionape.find({})
-        ]
-        return render_template("/gallery/gallery-9.html", entries=results)
-
-    @app.route('/gallery-10', methods=["POST", "GET"])
-    def collections2():
-        results = [
-            (
-                entry["_id"],
-                entry["name_apes"],
-                entry["image_link"],
-                entry["web_link"],
-            )
-            for entry in billionape.find({})
-        ]
-        return render_template("/gallery/gallery-10.html", entries=results)
-    
+        numbers = range(len(results))
+        return render_template("/gallery/gallery-1.html", entries=results, numbers=numbers)
 
     @app.route('/amc')
     def amccollection1():
