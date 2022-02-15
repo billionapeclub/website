@@ -1,0 +1,40 @@
+{% extends "layout.html"%}
+{% block title %} amc {% endblock %}
+
+{% block content %}
+
+<section id="amc">
+    <div class="container-fluid">
+        <div class="row">
+            <div class=".col-xl-6 col-lg-6 col-md-6 col-sm-12 apes__col">
+                <div class="apes__main">
+                    <div class="apes__box">
+                        <a href="{{ rarities[0][7] }}"><img src="{{ rarities[[0][6] }}" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class=".col-xl-6 col-lg-6 col-md-6 col-sm-12 apes__col">
+                <div class="apes__info">
+                        <h1><strong>{{ rarities[0][2] }}</strong></h1>
+                        <a class="navbar__link social-color" href="{{ rarities[[0][7] }}"><h5>{{ rarities[[0][3] }}</h5></a>
+                        <h4>Rank #{{ rarities[[0][4] }}</h4>
+                        <h4 class="apesh4">Rarity Score: {{ rarities[0][5] }}</h4>
+                        <h3>{{ rarities[0][1][0]['layer_name'] }}: {{ rarities[0][1][0]['trait_name'] }}</h3>
+                        <h3>{{ rarities[0][1][0]['layer_name'] }}: {{ rarities[0][1][0]['trait_name'] }}</h3>
+                        <h3>{{ rarities[0][1][0]['layer_name'] }}: {{ rarities[0][1][0]['trait_name'] }}</h3>
+                        <h3>{{ rarities[0][1][0]['layer_name'] }}: {{ rarities[0][1][0]['trait_name'] }}</h3>
+                        <h3>{{ rarities[0][1][0]['layer_name'] }}: {{ rarities[0][1][0]['trait_name'] }}</h3>
+                        <h3>{{ rarities[0][1][0]['layer_name'] }}: {{ rarities[0][1][0]['trait_name'] }}</h3>
+                        <h3>{{ rarities[0][1][0]['layer_name'] }}: {{ rarities[0][1][0]['trait_name'] }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+    </div>
+</section>
+
+
+{% endblock %}
