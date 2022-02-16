@@ -35,6 +35,7 @@ amc_results = [
                 entry["image_link"],
                 entry["web_link"],
                 entry['mint_link'],
+                entry['num_layers'],
             )
             for entry in rarities.find({})
         ]

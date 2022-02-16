@@ -16,7 +16,14 @@
                         </div>
                         <div class="apes__info">
                             <div class="align__apes">
-                                <h5><strong>{{ entries[item][2] }}</strong></h5>
+                                <a class="navbar__link social-color" href="/amc/apes?page={{ item + 1 }}"
+                                    target="_blank">
+                                    <h5>
+                                        <strong>
+                                            {{ entries[item][2] }}
+                                        </strong>
+                                    </h5>
+                                </a>
                             </div>
                         </div>
                     </div>
