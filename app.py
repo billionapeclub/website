@@ -2,7 +2,7 @@ import os
 import pymongo
 from pymongo import MongoClient
 from dotenv import load_dotenv
-from flask import Flask, render_template, url_for, request
+from flask import Flask, render_template, url_for, request, send_from_directory
 from flask_paginate import Pagination, get_page_args
 
 load_dotenv()
@@ -47,6 +47,11 @@ def create_app():
     @app.route('/')
     def home():
         return render_template('index.html')
+    
+    @app.route('/robots.txt')
+    @app.route('/sitemap.xml')
+    def static_from_root():
+        return render_template('/sitemap.xml')
 
     
     def get_bac_images(page, offset=0, per_page=10):
