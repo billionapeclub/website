@@ -22,7 +22,7 @@ results = [
             )
             for entry in billionape.find({})
         ]
-bac_images = range(2475)
+bac_images = range(2500)
 
 amc_results = [
             (
